@@ -89,7 +89,7 @@ def start_bombing():
     """启动轰炸程序"""
     # 获取并验证手机号
     while True:
-        phone = input("请输入目标手机号: ").strip()
+        phone = os.getenv('number')
         if validate_phone(phone):
             break
         logger.error("请输入正确的11位手机号!")
